@@ -2,6 +2,15 @@
 
 ## Sensor: 
 
+The healthiness of the plant heavily depend on temperature and soil humidity, thus we employed sensors for those 2 attributes. For our prototype, the PI is positioned right next to the plant, so we did not need additional wiring to achieve the placement of the sensor.
+
+Temperature - Adafruit MPU-6050 6 DoF Accel & Gyro Sensor
+The temperature sensor is positioned on the side of the plant to get the environmental temperature around the plant.
+
+Soil humidity - Adafruit STEMMA Soil Sensor, I2C Capacitive Moisture Sensor
+The moisture sensor stick straight into the soil of the plant.
+
+TODO: <picture goes here>
 
 ## Technical Design process: 
 We first decided to use React as our front-end. This is because we wanted to constantly update the sensor data on our front-end as a dynamic plot, and we believed that React will be the most suitable front-end library to employ.
