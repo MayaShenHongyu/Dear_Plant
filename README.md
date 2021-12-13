@@ -19,6 +19,10 @@
 
 Idea generation:
 
+What if we combine the idea of voice assistants and companion animals? From there, we generated our idea of developing a smart planter - Yours, Plant. 
+
+We considered two groups of people to solve their pain points. First, many people would love to have pets, but might not have the time or energy to do so.. There are also other possibilities such as allergy, living in shared spaces, and budget restraints. Many people have plants at home as well. However, not many of the plant owners can remember the exact schedule of watering, fertilizing, or sunbathing the plant. Therefore, we wanted to create an opportunity for both plant and pet lovers to feel and experience the human interaction with the plants through a smart planter that they can talk to and receive letters from. We aim to design a smart planter that can send all sorts of reminders, talk to the owner, and create a sense of companionship and emotional support.   
+
 Storyboard:
 
 Voice interaction & set up
@@ -27,13 +31,35 @@ Voice interaction & set up
 Web portal
 ![storyboard2](https://user-images.githubusercontent.com/90153252/145897160-a3c5b38f-faa5-4604-9c44-4298e55bcd53.jpeg)
 
-
 Core functionalities:
+
+* Voice interaction
+At the initial set up stage, the planter will wake up and will ask the user to identify itself. The user can tell the plant its breed/type/name simply by talking to it. This would set up the plant attributes (watering schedule/ideal moisture and temperature/bloom status/sunlight needed) as it will retrieve the related data from our plant database. Once the plant attributes are set up, the planter will ask the user to find an optimal place to grow by checking the moisture and temperature.
+
+Voice interactions can be triggered easily by calling its name. For example, the user can say “Hey Ivy” to trigger a conversation. The smart planter can talk to the owner in multiple contexts: asking for watering/sunlight/fertilizing, telling jokes, playing music, etc. For example, users can ask: “Hey Ivy! Play me some music.”
+
+The smart planter can also take photos for the owner. Users can simply call the name of the planter and trigger the interaction like normal voice assistants. For example: users can ask “Hey Ivy, can you take a photo of me?” It will then trigger the camera on the planter to take a photo and upload it on the web portal. 
+
+* Web portal
+We created a connected web portal for the smart planter to showcase real-time data and messages sent by the plant. Users can access the web portal anytime to check on the status of the plant.
+
+Temperature and humidity detection: The first part of the web portal is the real-time data from the temperature and moisture sensors, and there is a graph plotting data points for each of the sensors. If the temperature/humidity is out of the optimum range, the plant will send a message in the chat. For example, it will say “It’s too hot, please move me to somewhere cooler” when the temperature is too high.
+
+Chat with the plant: The plant will send messages/pictures in three scenarios. 1. When the owner is not at home, it will say something like “I haven’t seen you in a long time, I miss you” or send jokes. 2. When the owner asks the plant to take pictures, and when it takes pictures that the owner likes. For example, if the owner tells the plant that he/she loves sunset, it will take a picture of sunset everyday, say “The sunset was pretty today. I took a photo for you :)” and send the photo to the chat. 3. When the temperature/humidity is too high or too low, the plant will send reminders.
+
 
 **Design and Prototyping Process:**
 
+
+We used an actual Devil’s Ivy plant from one of our members for the prototyping. To fit the Raspberry Pi in the planter, we removed the plant from the current pot and repotted one new branch of the plant to a new pot. We divided the pot into two parts by separating them with waterproof plastics and tapes. In the following documentation, we will refer to the two parts as the Pi space and the plant space. The Pi space is designated to be dry so that the wires and Pi (put inside the Pi space) can function. We purchased a bag of fresh potting mix and fertilizers for the plant in the plant space to keep it growing. In terms of decoration, we wanted to show the personality of the plant by giving it a cute look. Therefore, we used a beanie hat as the clothing of the plant. We also put a paper butterfly on the planter to add on to the livelihood. 
+
+![repot](https://user-images.githubusercontent.com/90153252/145897805-90eed56d-c907-4dc2-b1af-73340392ee65.jpg)
+
+![waterproof](https://user-images.githubusercontent.com/90153252/145897815-94d3598e-16cb-4943-ac05-e0da8d5ebc15.jpg)
+
 ![two spaces](https://user-images.githubusercontent.com/90153252/145891491-8def678b-4be9-4485-bd16-ee1a906a66e3.jpg)
 
+![final prototype](https://user-images.githubusercontent.com/90153252/145897792-71a3cd48-6c38-4267-a04f-c5c0f48c0df9.jpg)
 
 **Demo:**
 
