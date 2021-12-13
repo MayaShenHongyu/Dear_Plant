@@ -7,6 +7,11 @@ The healthiness of the plant heavily depend on temperature and soil humidity, th
 Temperature - Adafruit MPU-6050 6 DoF Accel & Gyro Sensor
 The temperature sensor is positioned on the side of the plant to get the environmental temperature around the plant.
 
+```python
+mpu = adafruit_mpu6050.MPU6050(i2c)
+temperature = mpu.temperature
+```
+
 Soil humidity - Adafruit STEMMA Soil Sensor, I2C Capacitive Moisture Sensor
 The moisture sensor stick straight into the soil of the plant.
 
