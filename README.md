@@ -4,9 +4,9 @@
 
 **Ideation**
 
-Idea Generation:
+Idea generation:
 
-Core Functionalities:
+Core functionalities:
 
 **Design and Prototyping Process:**
 
