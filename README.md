@@ -19,6 +19,14 @@
 
 Idea generation:
 
+Storyboard:
+Voice interaction & set up
+![storyboard1](https://user-images.githubusercontent.com/90153252/145897154-f5f72303-8234-493f-861a-950a7e4ebcf4.jpeg)
+
+Web portal
+![storyboard2](https://user-images.githubusercontent.com/90153252/145897160-a3c5b38f-faa5-4604-9c44-4298e55bcd53.jpeg)
+
+
 Core functionalities:
 
 **Design and Prototyping Process:**
