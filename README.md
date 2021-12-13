@@ -3,6 +3,18 @@
 # Technical
 ## Back-end:
 * Flask: for constructing a backend server to communicate data via HTTP GET request.
+
+```
+from flask import Flask, jsonify, Response
+
+@app.route('/sensor')
+def sensor():
+    # temp = get_temperature()
+    response = jsonify({"temperature": get_temperature()})
+    response.headers.add('Access-Control-Allow-Origin', '*') 
+    return response
+```
+
 * Python threading library: for forking a long-running thread that constantly update sensor data on the Flask server.
 * Text2Speech: the text2speech library we used in lab 3 for plant-user interaction.
 * Speech2Text: the speech2text library we used in lab 3 for plant-user interaction, from which we employed the KaldiRecognizer.
