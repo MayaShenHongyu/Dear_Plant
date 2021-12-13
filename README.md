@@ -26,6 +26,7 @@ https://user-images.githubusercontent.com/90153252/145882156-03c84ccc-4a37-402b-
 The healthiness of the plant heavily depend on temperature and soil humidity, thus we employed sensors for those 2 attributes. For our prototype, the PI is positioned right next to the plant, so we did not need additional wiring to achieve the placement of the sensor.
 
 Temperature - Adafruit MPU-6050 6 DoF Accel & Gyro Sensor
+
 The temperature sensor is positioned on the side of the plant to get the environmental temperature around the plant.
 
 ```python
@@ -34,6 +35,7 @@ temperature = mpu.temperature
 ```
 
 Soil humidity - KeeYees High Sensitivity Soil Moisture Sensor
+
 The moisture sensor stick straight into the soil of the plant.
 
 TODO: picture here
