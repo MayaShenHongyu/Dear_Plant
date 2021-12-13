@@ -20,7 +20,6 @@ def sensor():
     response = jsonify({
         "temperature": get_temperature(),
         "humidity": get_humidity(),
-        "light_intensity": get_light_intensity(),
         "message": get_message(),
     })
     response.headers.add('Access-Control-Allow-Origin', '*') 
