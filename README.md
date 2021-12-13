@@ -23,6 +23,9 @@ Core functionalities:
 
 **Design and Prototyping Process:**
 
+![two spaces](https://user-images.githubusercontent.com/90153252/145891491-8def678b-4be9-4485-bd16-ee1a906a66e3.jpg)
+
+
 **Demo:**
 
 
@@ -53,7 +56,8 @@ Soil humidity - KeeYees High Sensitivity Soil Moisture Sensor
 
 The moisture sensor stick straight into the soil of the plant.
 
-TODO: picture here
+![sensor](https://user-images.githubusercontent.com/90153252/145891461-27af1744-28df-41cb-b11c-3cd9c48b6cb4.jpg)
+
 
 **Technical Design Process:**
 
