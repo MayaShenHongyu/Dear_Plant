@@ -9,7 +9,7 @@ We first decided to use React as our front-end. This is because we wanted to con
 For constructing our back-end server and full-stack communication, we initially wanted to employ the mosquito (MQTT) library we used in Lab 6 to communicate between the front-end and the back-end, because we thought for our design and implementation goal, it was the most intuitive approach. Using React as our front-end means that we will have to use MQTT.js library. However, we later discovered that the MQTT.js library has an open GitHub issue that has no working solution to be found on the internet, and this issue directly impact our purpose and usage. Therefore, instead keep trying to use MQTT while finding ways round, we pivoted to use Flask to construct a server, and we use HTTP GET request to communicate data in a JSON format. We fire a long-running thread on our back-end to continuously update the sensor data on the server, and on our front-end, we fetch the data from the server once per time interval (e.g. every 5 seconds).
 
 ## Back-end:
-* Flask: in order to communicate the sensor data with front-end plot, we used Flask for constructing a backend server to communicate data via HTTP GET request.
+* Flask: in order to communicate the sensor data with front-end plot, we used Flask for constructing a backend server to communicate data via HTTP GET request. We also interpreted our sensor data into text message and send it to the server, for a more personified interaction.
 ```python
 from flask import Flask, jsonify, Response
 
@@ -17,7 +17,12 @@ app.run(host="<Our server IP address>", port=4000)
 
 @app.route('/sensor')
 def sensor():
-    response = jsonify({"temperature": get_temperature()})
+    response = jsonify({
+        "temperature": get_temperature(),
+        "humidity": get_humidity(),
+        "light_intensity": get_light_intensity(),
+        "message": get_message(),
+    })
     response.headers.add('Access-Control-Allow-Origin', '*') 
     return response
 ```
