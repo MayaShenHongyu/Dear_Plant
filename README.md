@@ -1,8 +1,21 @@
 # Yours, Plant
 
+## Project Plan
+
+**Project Overview:**
+
+**Parts Needed:**
+
+**Timeline:**
+
+**Risk and Contingencies:**
+
+**Fall-back Plan:**
+
+
 ## Design Process
 
-**Ideation**
+**Ideation:**
 
 Idea generation:
 
@@ -23,7 +36,7 @@ https://user-images.githubusercontent.com/90153252/145882156-03c84ccc-4a37-402b-
 
 ## Technical Documentation
 
-**Sensor:**
+**Sensors:**
 
 The healthiness of the plant heavily depend on temperature and soil humidity, thus we employed sensors for those 2 attributes. For our prototype, the PI is positioned right next to the plant, so we did not need additional wiring to achieve the placement of the sensor.
 
