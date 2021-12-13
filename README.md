@@ -10,7 +10,7 @@ For constructing our back-end server and full-stack communication, we initially 
 ```python
 from flask import Flask, jsonify, Response
 
-app.run(host="10.56.132.250", port=4000)
+app.run(host="<Our server IP address>", port=4000)
 
 @app.route('/sensor')
 def sensor():
