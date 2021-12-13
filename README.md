@@ -14,7 +14,6 @@ app.run(host="10.56.132.250", port=4000)
 
 @app.route('/sensor')
 def sensor():
-    # temp = get_temperature()
     response = jsonify({"temperature": get_temperature()})
     response.headers.add('Access-Control-Allow-Origin', '*') 
     return response
