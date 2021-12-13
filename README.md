@@ -1,14 +1,14 @@
 # Yours, Plant
 
-## Ideation:
+## Ideation
 
 **Idea Generation:**
 
 **Core Functionalities:**
 
-## Design and Prototyping Process:
+## Design and Prototyping Process
 
-## Demo:
+## Demo
 
 
 https://user-images.githubusercontent.com/90153252/145882128-406786e2-4dda-401e-acfc-517f864e6b66.mp4
@@ -19,8 +19,9 @@ https://user-images.githubusercontent.com/90153252/145882143-38cba4ac-e00d-4cee-
 
 https://user-images.githubusercontent.com/90153252/145882156-03c84ccc-4a37-402b-bd2f-522178ef0fb1.mp4
 
+## Technical Documentation
 
-## Sensor: 
+**Sensor: **
 
 The healthiness of the plant heavily depend on temperature and soil humidity, thus we employed sensors for those 2 attributes. For our prototype, the PI is positioned right next to the plant, so we did not need additional wiring to achieve the placement of the sensor.
 
@@ -37,12 +38,14 @@ The moisture sensor stick straight into the soil of the plant.
 
 TODO: picture here
 
-## Technical Design Process: 
+**Technical Design Process: **
+
 We decided to use React as our front-end. This is because we wanted to constantly update the sensor data on our front-end as a dynamic plot, and we believed that React will be the most suitable front-end library to employ as the state programming provides a easy way to implement dynamic UI.
 
 For constructing our back-end server and full-stack communication, we initially wanted to employ the mosquito (MQTT) library we used in Lab 6 to communicate between the front-end and the back-end, because we thought for our design and implementation goal, it was the most intuitive approach. Using React as our front-end means that we will have to use MQTT.js library. However, we later discovered that the MQTT.js library has an open GitHub issue that has no working solution to be found on the internet, and this issue directly impact our purpose and usage. Therefore, instead keep trying to use MQTT while finding ways round, we pivoted to use Flask to construct a server, and we use HTTP GET request to communicate data in a JSON format. We fire a long-running thread on our back-end to continuously update the sensor data on the server, and on our front-end, we fetch the data from the server once per time interval (e.g. every 5 seconds).
 
-## Back-end:
+**Back-end:**
+
 * Sensor data: we read our temperature and soil moisture sensor data directly using the python Raspberry Pi library.
 * Flask: in order to communicate the sensor data with front-end plot, we used Flask for constructing a backend server to communicate data via HTTP GET request. We also interpreted our sensor data into text message and send it to the server, for a more personified interaction.
 ```python
@@ -89,7 +92,8 @@ def recognize(pattern):
     return ""
 ```
 
-## Front-end:
+**Front-end:**
+
 * React: for basic UI layout, including sensor data history plot and voice interaction message record.
 * Axios: for firing HTTP GET request and fetching and decoding JSON format data.
 ```javascript
@@ -99,6 +103,6 @@ axios.get(`http://<Our server IP address>/sensor`).then((res) => {
 ```
 * Recharts: for data plotting.
 
-## User Testing and Feedback:
+## User Testing and Feedback
 
-## Group Work Distribution:
+## Group Work Distribution
