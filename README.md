@@ -34,7 +34,8 @@ Web portal
 Core functionalities:
 
 * Voice interaction
-At the initial set up stage, the planter will wake up and will ask the user to identify itself. The user can tell the plant its breed/type/name simply by talking to it. This would set up the plant attributes (watering schedule/ideal moisture and temperature/bloom status/sunlight needed) as it will retrieve the related data from our plant database. Once the plant attributes are set up, the planter will ask the user to find an optimal place to grow by checking the moisture and temperature.
+
+** At the initial set up stage, the planter will wake up and will ask the user to identify itself. The user can tell the plant its breed/type/name simply by talking to it. This would set up the plant attributes (watering schedule/ideal moisture and temperature/bloom status/sunlight needed) as it will retrieve the related data from our plant database. Once the plant attributes are set up, the planter will ask the user to find an optimal place to grow by checking the moisture and temperature.
 
 Voice interactions can be triggered easily by calling its name. For example, the user can say “Hey Ivy” to trigger a conversation. The smart planter can talk to the owner in multiple contexts: asking for watering/sunlight/fertilizing, telling jokes, playing music, etc. For example, users can ask: “Hey Ivy! Play me some music.”
 
