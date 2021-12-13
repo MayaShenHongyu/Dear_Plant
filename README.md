@@ -2,10 +2,10 @@
 
 # Technical
 ## Back-end:
-Flask: for constructing a backend server to communicate data via HTTP GET request.
-Python threading library: for forking a long-running thread that constantly update sensor data on the Flask server.
-Text2Speech: the text2speech library we used in lab 3 for plant-user interaction.
-Speech2Text: the speech2text library we used in lab 3 for plant-user interaction, from which we employed the KaldiRecognizer.
+* Flask: for constructing a backend server to communicate data via HTTP GET request.
+* Python threading library: for forking a long-running thread that constantly update sensor data on the Flask server.
+* Text2Speech: the text2speech library we used in lab 3 for plant-user interaction.
+* Speech2Text: the speech2text library we used in lab 3 for plant-user interaction, from which we employed the KaldiRecognizer.
 
 ## Front-end:
 React: for basic UI layout.
