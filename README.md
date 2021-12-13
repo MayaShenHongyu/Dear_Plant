@@ -4,7 +4,7 @@
 ## Back-end:
 * Flask: for constructing a backend server to communicate data via HTTP GET request.
 
-```
+```python
 from flask import Flask, jsonify, Response
 
 @app.route('/sensor')
