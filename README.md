@@ -1,5 +1,13 @@
 # Yours, Plant
 
+## Demo:
+
+https://user-images.githubusercontent.com/90153252/145882128-406786e2-4dda-401e-acfc-517f864e6b66.mp4
+
+https://user-images.githubusercontent.com/90153252/145882143-38cba4ac-e00d-4cee-b024-c588f4ae8b23.mp4
+
+https://user-images.githubusercontent.com/90153252/145882156-03c84ccc-4a37-402b-bd2f-522178ef0fb1.mp4
+
 ## Sensor: 
 
 The healthiness of the plant heavily depend on temperature and soil humidity, thus we employed sensors for those 2 attributes. For our prototype, the PI is positioned right next to the plant, so we did not need additional wiring to achieve the placement of the sensor.
