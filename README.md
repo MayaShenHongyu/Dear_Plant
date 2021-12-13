@@ -21,7 +21,7 @@ https://user-images.githubusercontent.com/90153252/145882156-03c84ccc-4a37-402b-
 
 ## Technical Documentation
 
-**Sensor: **
+**Sensor:**
 
 The healthiness of the plant heavily depend on temperature and soil humidity, thus we employed sensors for those 2 attributes. For our prototype, the PI is positioned right next to the plant, so we did not need additional wiring to achieve the placement of the sensor.
 
@@ -38,7 +38,7 @@ The moisture sensor stick straight into the soil of the plant.
 
 TODO: picture here
 
-**Technical Design Process: **
+**Technical Design Process:**
 
 We decided to use React as our front-end. This is because we wanted to constantly update the sensor data on our front-end as a dynamic plot, and we believed that React will be the most suitable front-end library to employ as the state programming provides a easy way to implement dynamic UI.
 
