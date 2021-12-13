@@ -52,8 +52,8 @@ def recognize(pattern):
 * React: for basic UI layout, including sensor data history plot and voice interaction message record.
 * Axios: for firing HTTP GET request and fetching and decoding JSON format data.
 ```javascript
-axios.get(`http://10.56.132.250:4000/sensor`).then((res) => {
+axios.get(`http://<Our server IP address>/sensor`).then((res) => {
     // process the JSON data here
-    })
+})
 ```
 * Recharts: for data plotting.
