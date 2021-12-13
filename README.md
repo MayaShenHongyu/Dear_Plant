@@ -3,9 +3,10 @@
 # Technical
 ## Back-end:
 * Flask: for constructing a backend server to communicate data via HTTP GET request.
-
 ```python
 from flask import Flask, jsonify, Response
+
+app.run(host="10.56.132.250", port=4000)
 
 @app.route('/sensor')
 def sensor():
@@ -14,9 +15,20 @@ def sensor():
     response.headers.add('Access-Control-Allow-Origin', '*') 
     return response
 ```
-
 * Python threading library: for forking a long-running thread that constantly update sensor data on the Flask server.
+```python
+threading.Thread(target=flaskThread).start()
+```
 * Text2Speech: the text2speech library we used in lab 3 for plant-user interaction.
+```python
+def speak(instruction):
+    command = """
+        say() { 
+            local IFS=+;/usr/bin/mplayer -ao alsa -really-quiet -noconsolecontrols "http://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=$*&tl=en"; 
+        } ; 
+    """ + f"say '{instruction}'"
+    subprocess.call(command, shell=True)
+```
 * Speech2Text: the speech2text library we used in lab 3 for plant-user interaction, from which we employed the KaldiRecognizer.
 
 ## Front-end:
