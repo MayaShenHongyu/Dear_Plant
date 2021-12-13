@@ -17,13 +17,13 @@
 
 **Ideation:**
 
-Idea generation:
+_Idea generation:_
 
 What if we combine the idea of voice assistants and companion animals? From there, we generated our idea of developing a smart planter - Yours, Plant. 
 
 We considered two groups of people to solve their pain points. First, many people would love to have pets, but might not have the time or energy to do so.. There are also other possibilities such as allergy, living in shared spaces, and budget restraints. Many people have plants at home as well. However, not many of the plant owners can remember the exact schedule of watering, fertilizing, or sunbathing the plant. Therefore, we wanted to create an opportunity for both plant and pet lovers to feel and experience the human interaction with the plants through a smart planter that they can talk to and receive letters from. We aim to design a smart planter that can send all sorts of reminders, talk to the owner, and create a sense of companionship and emotional support.   
 
-Storyboard:
+_Storyboard:_
 
 Voice interaction & set up
 ![storyboard1](https://user-images.githubusercontent.com/90153252/145897154-f5f72303-8234-493f-861a-950a7e4ebcf4.jpeg)
@@ -31,7 +31,7 @@ Voice interaction & set up
 Web portal
 ![storyboard2](https://user-images.githubusercontent.com/90153252/145897160-a3c5b38f-faa5-4604-9c44-4298e55bcd53.jpeg)
 
-Core functionalities:
+_Core functionalities:_
 
 * Voice interaction
 
