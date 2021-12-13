@@ -1,14 +1,16 @@
 # Yours, Plant
 
-## Ideation
+## Design Process
 
-**Idea Generation:**
+**Ideation**
 
-**Core Functionalities:**
+Idea Generation:
 
-## Design and Prototyping Process
+Core Functionalities:
 
-## Demo
+**Design and Prototyping Process:**
+
+**Demo:**
 
 
 https://user-images.githubusercontent.com/90153252/145882128-406786e2-4dda-401e-acfc-517f864e6b66.mp4
