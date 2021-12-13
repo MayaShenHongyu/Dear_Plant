@@ -3,6 +3,7 @@ import "./Portal.css";
 import axios from "axios";
 import profile from "./profile.jpg";
 import tram from "./tram.jpeg";
+import selfie from "./selfie.jpeg"
 import {
   LineChart,
   Line,
@@ -13,6 +14,8 @@ import {
   Tooltip,
 } from "recharts";
 
+const portal = "100.64.3.110"
+
 export default class Portal extends Component {
   constructor(props) {
     super(props);
@@ -22,8 +25,8 @@ export default class Portal extends Component {
     this.plotWidth = window.innerWidth * 0.4
     this.plotHeight = window.innerHeight * 0.65 * 0.5
     this.limits = {
-      temperature: { max: 30, min: 15 },
-      humidity: { max: 22, min: 24 }
+      temperature: { max: 28, min: 15 },
+      humidity: { max: 5, min: 2 }
     }
     this.state = {
       humidity_data: [],
@@ -34,7 +37,8 @@ export default class Portal extends Component {
         { type: "text", time: new Date(2021, 11, 10, 16, 0), message: "hey, i haven't seen you in 2 hours and 15 mins, where have you been? i'm bored, how about we talk about life and existence?" },
         { type: "text", message: "help! i need some water" },
         { type: "text", message: "the sunset was pretty today. you were not there so i took a photo for you :)" },
-        { type: "photo", message: tram }
+        { type: "photo", message: tram },
+        { type: "photo", message: selfie, time: new Date(2021, 11, 10, 22, 58) }
       ],
     }
                 //     {/* <Time time={new Date(2021, 11, 10, 15, 10)} />
@@ -55,45 +59,76 @@ export default class Portal extends Component {
   fetchHumidityData() {
     const { max, min } = this.limits.humidity
     setInterval(() => {
-      // axios.get(`http://192.168.99.54:4000/humidity`)
-      //     .then(res => {
-      const currentData = 22.5 + Math.random() * 1;
-      // const currentData = res.data.humidity;
-      const today = new Date();
-      const currentTime = `${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`;
+      axios.get(`http://${portal}:4000/moisture`).then(res => {
+        const isMoisturous = res.data.moisture
+        console.log(isMoisturous)
+        // const currentData = isMoisturous ? 4 + Math.random() * 0.5 : 1 + Math.random() * 0.5 
+        const currentData = 4 + Math.random() * 0.2
+        const today = new Date();
+        const currentTime = `${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`;
+
+        
+        this.setState((prevState) => {
+          const { chats: raw_chats, humidity_data: raw_data } = prevState
+          const humidity_data = raw_data.slice()
+          const chats = raw_chats.slice()
+          humidity_data.push({ time: currentTime, val: currentData });
+          if (humidity_data.length > this.numData) {
+            humidity_data.splice(0, 1);
+          }
+          const prevData = humidity_data[humidity_data.length - 2]
+          if (currentData < min && (!prevData || prevData.val > min)) {
+            chats.push({
+              time: today,
+              type: "text",
+              message: "i'm thirsty. i need water :("
+            })
+          }
+          return {
+            ...prevState,
+            humidity_data,
+            chats
+          }
+        })
+
+      })
+
+      // const currentData = 22.5 + Math.random() * 1;
+      // const today = new Date();
+      // const currentTime = `${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`;
 
       
-      this.setState((prevState) => {
-        const { chats: raw_chats, humidity_data: raw_data } = prevState
-        const humidity_data = raw_data.slice()
-        const chats = raw_chats.slice()
-        humidity_data.push({ time: currentTime, val: currentData });
-        if (humidity_data.length > this.numData) {
-          humidity_data.splice(0, 1);
-        }
-        const prevData = humidity_data[humidity_data.length - 2]
-        if (currentData < min && (!prevData || prevData > min)) {
-          chats.push({
-            time: today,
-            type: "text",
-            message: "i'm thirsty. i need water :("
-          })
-        }
-        return {
-          ...prevState,
-          humidity_data,
-          chats
-        }
-      })
+      // this.setState((prevState) => {
+      //   const { chats: raw_chats, humidity_data: raw_data } = prevState
+      //   const humidity_data = raw_data.slice()
+      //   const chats = raw_chats.slice()
+      //   humidity_data.push({ time: currentTime, val: currentData });
+      //   if (humidity_data.length > this.numData) {
+      //     humidity_data.splice(0, 1);
+      //   }
+      //   const prevData = humidity_data[humidity_data.length - 2]
+      //   if (currentData < min && (!prevData || prevData > min)) {
+      //     chats.push({
+      //       time: today,
+      //       type: "text",
+      //       message: "i'm thirsty. i need water :("
+      //     })
+      //   }
+      //   return {
+      //     ...prevState,
+      //     humidity_data,
+      //     chats
+      //   }
+      // })
     }, 1000 * this.intervalInSecond)
   }
 
   fetchTemperatureData() {
     const { max, min } = this.limits.temperature
     setInterval(() => {
-      axios.get(`http://10.56.132.250:4000/sensor`).then((res) => {
+      axios.get(`http://${portal}:4000/temperature`).then((res) => {
         const currentData = res.data.temperature;
-        const today = Date.now();
+        const today = new Date();
         const currentTime = `${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`;
 
         this.setState((prevState) => {
@@ -106,22 +141,24 @@ export default class Portal extends Component {
           }
 
           const prevData = temperature_data[temperature_data.length - 2]
-          if (currentData < min && (!prevData || prevData > min)) {
+          if (currentData < min && (!prevData || prevData.val > min)) {
             chats.push({ 
-              chats: chats.concat({ 
-                time: today, 
-                type: "text", 
-                message: "i'm really cold, please move me to somewhere warmer", }) 
-              })
+              time: today, 
+              type: "text", 
+              message: "i'm really cold, please move me to somewhere warmer"
+            })
+
           }
+
+          console.log(currentData, prevData, prevData < max)
   
-          if (currentData > max && (!prevData || prevData < max)) {
+          if (currentData > max && (!prevData || prevData.val < max)) {
+            console.log("Yes")
             chats.push({ 
-              chats: chats.concat({ 
-                time: today, 
-                type: "text", 
-                message: "i'm too hot, please move me to somewhere cooler", }) 
-              })
+              time: today, 
+              type: "text", 
+              message: "it's too hot, please move me to somewhere cooler",
+            })
           }
           return {
             ...prevState,
@@ -150,7 +187,8 @@ export default class Portal extends Component {
               />
             <div className="header-title">
               <h1 id="ivy">Ivy</h1>
-              <div>Some description of ivy</div>
+              {/* <div>Hi I'm Ivy! (They/Them) My full name is Devil's Ivy, but my roomate said that the name's too creepy.</div> */}
+              <div>I love drinking loads of water, talking to my roomate, and watching sunsets.</div>
             </div>
           </div>
           
@@ -158,14 +196,14 @@ export default class Portal extends Component {
         <div className="content">
           <div id="plot-container">
             <div>
-              <h4> Humidity </h4>
+              <h4> Moisture Level </h4>
               <LineChart
                 width={plotWidth}
                 height={plotHeight}
                 data={humidity_data}
               >
                 <XAxis dataKey="time" tickCount={5} />
-                <YAxis domain={[20, 25]} />
+                <YAxis domain={[0, 5]} />
                 <Tooltip
                   formatter={(value, _name, _props) => [
                     value.toFixed(2),
@@ -188,7 +226,7 @@ export default class Portal extends Component {
                 <Tooltip
                   formatter={(value, _name, _props) => [value.toFixed(2), "Temp"]}
                 />
-                <ReferenceLine y={30} stroke="red" strokeDasharray="2 2" />
+                <ReferenceLine y={28} stroke="red" strokeDasharray="2 2" />
                 <ReferenceLine y={15} stroke="red" strokeDasharray="2 2" />
                 {/* <CartesianGrid stroke="#eee" strokeDasharray="5 5" /> */}
                 <Line type="natural" dataKey="val" stroke="#82ca9d" />
