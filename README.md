@@ -33,7 +33,7 @@ mpu = adafruit_mpu6050.MPU6050(i2c)
 temperature = mpu.temperature
 ```
 
-Soil humidity - Adafruit STEMMA Soil Sensor, I2C Capacitive Moisture Sensor
+Soil humidity - KeeYees High Sensitivity Soil Moisture Sensor
 The moisture sensor stick straight into the soil of the plant.
 
 TODO: picture here
