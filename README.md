@@ -10,7 +10,7 @@ The temperature sensor is positioned on the side of the plant to get the environ
 Soil humidity - Adafruit STEMMA Soil Sensor, I2C Capacitive Moisture Sensor
 The moisture sensor stick straight into the soil of the plant.
 
-TODO: <picture goes here>
+TODO: picture here
 
 ## Technical Design process: 
 We first decided to use React as our front-end. This is because we wanted to constantly update the sensor data on our front-end as a dynamic plot, and we believed that React will be the most suitable front-end library to employ.
