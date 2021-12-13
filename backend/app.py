@@ -9,26 +9,42 @@ import time
 # import schedule
 import board
 import adafruit_mpu6050
-import requests
+import RPi.GPIO as GPIO
 
 from flask import Flask, jsonify, Response
 
 
-### Hardware setup
+### Temperature sensor setup
 i2c = board.I2C()  # uses board.SCL and board.SDA
 mpu = adafruit_mpu6050.MPU6050(i2c)
 
+### Soil moisture sensor setup
+channel = 11
+# GPIO.setmode(GPIO.BOARD)
+GPIO.setup(channel, GPIO.IN)
+
+
 ### Flask
 app = Flask(__name__)
+
+def get_moisture_level():
+    print("Moisture:", GPIO.input(channel))
+    return GPIO.input(channel)
 
 def get_temperature():
     return mpu.temperature - 8
 
 def flaskThread():
-    app.run(host="10.56.132.250", port=4000)
+    app.run(host="100.64.3.110", port=4000)
 
-@app.route('/sensor')
-def sensor():
+@app.route('/moisture')
+def moisture():
+    response = jsonify({"moisture": get_moisture_level()})
+    response.headers.add('Access-Control-Allow-Origin', '*') 
+    return response
+
+@app.route('/temperature')
+def temperature():
     # temp = get_temperature()
     response = jsonify({"temperature": get_temperature()})
     response.headers.add('Access-Control-Allow-Origin', '*') 
@@ -157,7 +173,7 @@ def tell_joke():
     global joke_index
     jokes = [
         ["What do you call a cow with a twitch?", "Beef Jerky"], 
-        ["What did one wall say to the other?", "I'll meet you at the corner."],
+        ["What did one wall say to the other?", "I‘ll meet you at the corner."],
         ["What has more letters than the alphabet?", "The post office!"]
     ]
 
