@@ -35,13 +35,14 @@ Core functionalities:
 
 * Voice interaction
 
-** At the initial set up stage, the planter will wake up and will ask the user to identify itself. The user can tell the plant its breed/type/name simply by talking to it. This would set up the plant attributes (watering schedule/ideal moisture and temperature/bloom status/sunlight needed) as it will retrieve the related data from our plant database. Once the plant attributes are set up, the planter will ask the user to find an optimal place to grow by checking the moisture and temperature.
+At the initial set up stage, the planter will wake up and will ask the user to identify itself. The user can tell the plant its breed/type/name simply by talking to it. This would set up the plant attributes (watering schedule/ideal moisture and temperature/bloom status/sunlight needed) as it will retrieve the related data from our plant database. Once the plant attributes are set up, the planter will ask the user to find an optimal place to grow by checking the moisture and temperature.
 
 Voice interactions can be triggered easily by calling its name. For example, the user can say “Hey Ivy” to trigger a conversation. The smart planter can talk to the owner in multiple contexts: asking for watering/sunlight/fertilizing, telling jokes, playing music, etc. For example, users can ask: “Hey Ivy! Play me some music.”
 
 The smart planter can also take photos for the owner. Users can simply call the name of the planter and trigger the interaction like normal voice assistants. For example: users can ask “Hey Ivy, can you take a photo of me?” It will then trigger the camera on the planter to take a photo and upload it on the web portal. 
 
 * Web portal
+
 We created a connected web portal for the smart planter to showcase real-time data and messages sent by the plant. Users can access the web portal anytime to check on the status of the plant.
 
 Temperature and humidity detection: The first part of the web portal is the real-time data from the temperature and moisture sensors, and there is a graph plotting data points for each of the sensors. If the temperature/humidity is out of the optimum range, the plant will send a message in the chat. For example, it will say “It’s too hot, please move me to somewhere cooler” when the temperature is too high.
