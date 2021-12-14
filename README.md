@@ -162,5 +162,19 @@ axios.get(`http://<Our server IP address>/sensor`).then((res) => {
 * Recharts: for data plotting.
 
 ## User Testing and Feedback
+Some of the comments we received from the project plan: 
+<img width="622" alt="feedback 1" src="https://user-images.githubusercontent.com/90153252/145914233-885c5b99-68a4-4d79-af02-dd34895058d6.png">
+<img width="623" alt="feedback 2" src="https://user-images.githubusercontent.com/90153252/145914236-ed3fdb3b-3bf0-4014-bbc3-6c4f814fcf6b.png">
+<img width="624" alt="feedback 3" src="https://user-images.githubusercontent.com/90153252/145914239-23b5d9e3-bebf-423f-b545-f4f72b520eb7.png">
+<img width="621" alt="feedback 4" src="https://user-images.githubusercontent.com/90153252/145914243-bb55a911-6d02-4851-ae5d-88ea60b318e6.png">
+
+
+
+We tested our devices with several users. Most of them liked the idea and prototype, especially because they all said that they often forget to water their plants on time. Some of the advice and suggestions we received from user testings are as follows:
+Make it feel more “plant-like”. Think of what a plant would say.
+Consider the possibility of connecting two planters and have them talk to each other. 
+The voice recognition systems are not sensitive enough to trigger every possible conversation, especially when the background noise is loud. 
+Consider having an LED screen that shows their emotions, such as smiley faces. 
+
 
 ## Group Work Distribution
