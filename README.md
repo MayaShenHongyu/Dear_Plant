@@ -163,18 +163,39 @@ axios.get(`http://<Our server IP address>/sensor`).then((res) => {
 
 ## User Testing and Feedback
 Some of the comments we received from the project plan: 
-<img width="622" alt="feedback 1" src="https://user-images.githubusercontent.com/90153252/145914233-885c5b99-68a4-4d79-af02-dd34895058d6.png">
+<img width="619" alt="feedback 1" src="https://user-images.githubusercontent.com/90153252/145914347-40c5de1b-b200-4153-9bc6-1a262e68de49.png">
 <img width="623" alt="feedback 2" src="https://user-images.githubusercontent.com/90153252/145914236-ed3fdb3b-3bf0-4014-bbc3-6c4f814fcf6b.png">
 <img width="624" alt="feedback 3" src="https://user-images.githubusercontent.com/90153252/145914239-23b5d9e3-bebf-423f-b545-f4f72b520eb7.png">
 <img width="621" alt="feedback 4" src="https://user-images.githubusercontent.com/90153252/145914243-bb55a911-6d02-4851-ae5d-88ea60b318e6.png">
 
-
-
 We tested our devices with several users. Most of them liked the idea and prototype, especially because they all said that they often forget to water their plants on time. Some of the advice and suggestions we received from user testings are as follows:
-Make it feel more “plant-like”. Think of what a plant would say.
-Consider the possibility of connecting two planters and have them talk to each other. 
-The voice recognition systems are not sensitive enough to trigger every possible conversation, especially when the background noise is loud. 
-Consider having an LED screen that shows their emotions, such as smiley faces. 
 
+1. Make it feel more “plant-like”. Think of what a plant would say.
+2. Consider the possibility of connecting two planters and have them talk to each other. 
+3. The voice recognition systems are not sensitive enough to trigger every possible conversation, especially when the background noise is loud. 
+4. Consider having an LED screen that shows their emotions, such as smiley faces. 
+
+## Future Directions
+
+From all of the advice and suggestions we received, we found out some possible future directions we can aim to achieve. 
+1. We hope we can add bluetooth functions to the plant so that users can move it around easier and don’t have to worry about the length of the cable.
+2. We hope to train the device to recognize objects, human-beings, or scenes such as sunrises and sunsets. When the user asks to take photos of certain live beings or objects, it automatically captures pictures when it sees the targets. This might be achieved through machine learning or using the teachable machine. 
+3. Add an LED screen that shows a “face” of the plant and real-time emotions, such as smiley faces. 
 
 ## Group Work Distribution
+
+Maya Hongyu Shen and Larry Qianzhi Xu were in charge of most of the technical development and documentation, including programming the web portal and the raspberry pi backend, voice interaction, and other core functionalities. 
+
+Zhenghe Wang and Ruby Pan worked on ideation, prototyping, feature development, overseeing the project timeline, user testing, and the final report.  
+
+## Reflection
+
+What have you learned or wish you knew at the start of your project 
+1. Throughout the user-testing process, we found that the speaker volume was a little bit low and the microphone was not sensitive enough to listen to voice commands. However, we were only able to find out this problem at the user-testing stage. It would significantly improve the final device if we added or used external devices that are more sensitive/controllable. 
+2. Fall-back plans should include purchasing extra sensors! Initially, we only purchased one moisture sensor that did not come with the corresponding chord. After a few tries, we accidentally caused an electrical short-circuit of the sensor. We had to purchase it again at the very end. We purchased five moisture sensors at the end to make sure similar incidents don’t happen again.
+3. We investigated and learned different back-end methods. Initially, we used MQTT because none of us knew how to use Flask. However, we experienced some MQTT technical difficulties. We started using Flask instead and found out that it is actually a really useful back-end server. 
+4. We learned that project management and group work distribution were important. Initially, we all worked individually on different parts of the project with the hope that it would be more efficient. Yet we found that working individually actually made it harder to put everything together. We then changed our work assignment and completed everything in pairs of two. We would meet up every other day and have brief meetings. In this way, we were able to complete the project in a very efficient and collaborative manner. We all had fun working together!
+5. Developing a device requires a great amount of user testing and iterations. We had a lot of confidence and imagination of our device at the beginning. We were able to narrow it down and refine the idea and functionalities through rounds of testing and updates. This process also took longer than expected. 
+6. So many possibilities! We did not realize there are so many creative possibilities we can do for the project until at the final project exhibition. It was an eye-opening experience for us to see all of the amazing projects done by our classmates. We also spent a lot of time talking with the other groups to see how they developed their devices. 
+
+
