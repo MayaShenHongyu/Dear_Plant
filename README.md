@@ -106,6 +106,10 @@ Demo of voice interaction and the web portal:
 
 https://user-images.githubusercontent.com/90153252/145882143-38cba4ac-e00d-4cee-b024-c588f4ae8b23.mp4
 
+![web portal2](https://user-images.githubusercontent.com/90153252/145917476-6e425f46-c396-4242-b5e1-aafc51df2947.jpg)
+
+![web portal1](https://user-images.githubusercontent.com/90153252/145917459-77d4e2af-ecd4-448e-9b48-eb6d3e1a3f0d.jpg)
+
 Demo of the reminder of high temperature:
 
 https://user-images.githubusercontent.com/90153252/145882156-03c84ccc-4a37-402b-bd2f-522178ef0fb1.mp4
