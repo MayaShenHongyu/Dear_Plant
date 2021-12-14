@@ -99,12 +99,15 @@ Final prototype:
 **Demo:**
 
 Demo of the initial set-up:
+
 https://user-images.githubusercontent.com/90153252/145882128-406786e2-4dda-401e-acfc-517f864e6b66.mp4
 
-Demo of voice interaction:
+Demo of voice interaction and the web portal:
+
 https://user-images.githubusercontent.com/90153252/145882143-38cba4ac-e00d-4cee-b024-c588f4ae8b23.mp4
 
-Demo of changing temperature:
+Demo of the reminder of high temperature:
+
 https://user-images.githubusercontent.com/90153252/145882156-03c84ccc-4a37-402b-bd2f-522178ef0fb1.mp4
 
 ## Technical Documentation
