@@ -33,6 +33,7 @@ Our main idea is to develop a smart planter that acts as a companion animal for 
 **Risk and Contingencies:**
 
 * Voice recognition
+
 Our past experience with the voice recognition system showed that it is hard for the system to recognize certain words, for example, names of plants.
 
 The volume of the speaker is a little bit low and we don’t understand how to adjust the volume.
@@ -40,6 +41,7 @@ The volume of the speaker is a little bit low and we don’t understand how to a
 When we tried to interact with the system in past labs, we naturally used more formal languages and shorter sentences. It might be due to the fact that we don't expect the machine to be very smart. Therefore, we need to make the device we're talking to more "humanlike”.
 
 * Length of cable
+
 Due to the fact that our pi is connected with a short cable, we may not be able to move the device around the room a lot.
 
 **Fall-back Plan:**
@@ -88,21 +90,21 @@ Chat with the plant: The plant will send messages/pictures in three scenarios. 1
 
 We used an actual Devil’s Ivy plant from one of our members for the prototyping. To fit the Raspberry Pi in the planter, we removed the plant from the current pot and repotted one new branch of the plant to a new pot. We divided the pot into two parts by separating them with waterproof plastics and tapes. In the following documentation, we will refer to the two parts as the Pi space and the plant space. The Pi space is designated to be dry so that the wires and Pi (put inside the Pi space) can function. We purchased a bag of fresh potting mix and fertilizers for the plant in the plant space to keep it growing. In terms of decoration, we wanted to show the personality of the plant by giving it a cute look. Therefore, we used a beanie hat as the clothing of the plant. We also put a paper butterfly on the planter to add on to the livelihood. 
 
+Our prototyping process (repot a new branch of the plant & seperate spaces by waterproof plastics):
 ![prototype process](https://user-images.githubusercontent.com/90153252/145915129-5e1a9b1a-3d3e-4971-b56b-048923cbbe26.jpg)
 
-![two spaces](https://user-images.githubusercontent.com/90153252/145891491-8def678b-4be9-4485-bd16-ee1a906a66e3.jpg)
-
-![final prototype](https://user-images.githubusercontent.com/90153252/145897792-71a3cd48-6c38-4267-a04f-c5c0f48c0df9.jpg)
+Final prototype:
+![final prototype](https://user-images.githubusercontent.com/90153252/145915373-eacf1e8c-4a57-4904-b60e-9a03ec668150.jpg)
 
 **Demo:**
 
-
+Demo of the initial set-up:
 https://user-images.githubusercontent.com/90153252/145882128-406786e2-4dda-401e-acfc-517f864e6b66.mp4
 
-
+Demo of voice interaction:
 https://user-images.githubusercontent.com/90153252/145882143-38cba4ac-e00d-4cee-b024-c588f4ae8b23.mp4
 
-
+Demo of changing temperature:
 https://user-images.githubusercontent.com/90153252/145882156-03c84ccc-4a37-402b-bd2f-522178ef0fb1.mp4
 
 ## Technical Documentation
