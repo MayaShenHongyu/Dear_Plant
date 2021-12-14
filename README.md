@@ -4,14 +4,47 @@
 
 **Project Overview:**
 
+Our main idea is to develop a smart planter that acts as a companion animal for people who don’t have time or opportunity for raising real pets. The planter can communicate with the owner through fun and engaging interactions and create a sense of emotional support to the user. Therefore, we named the device: “Yours, Plant” to resemble the signature of a love letter to the owner. 
+
 **Parts Needed:**
+
+* Sensing soil moisture: Adafruit STEMMA Soil Sensor - I2C Capacitive Moisture Sensor or KeeYees High Sensitivity Soil Moisture Sensor
+* Sensing temperature: Adafruit MPU-6050 6 DoF Accel & Gyro Sensor
+* Sensing light: Adafruit APDS9960 Proximity, Light, RBG, Gesture Sensor
+* Voice interaction: Mini USB Microphone, speaker
+* Capturing image: Webcam
 
 **Timeline:**
 
+11/29 - Purchase and test out all the necessary parts
+
+12/1 - Code for sensor such as soil moisture, temperature, and light detection; basic voice interaction
+
+12/2 - Functional checkoff
+
+12/6 - Finish physical prototype of the device; train image capturing; finish voice interaction
+
+12/7 - Final project presentation
+
+12/12 - Finish write-up and documentation
+
+12/13 - Write-up and documentation due
+
 **Risk and Contingencies:**
+
+* Voice recognition
+Our past experience with the voice recognition system showed that it is hard for the system to recognize certain words, for example, names of plants.
+
+The volume of the speaker is a little bit low and we don’t understand how to adjust the volume.
+
+When we tried to interact with the system in past labs, we naturally used more formal languages and shorter sentences. It might be due to the fact that we don't expect the machine to be very smart. Therefore, we need to make the device we're talking to more "humanlike”.
+
+* Length of cable
+Due to the fact that our pi is connected with a short cable, we may not be able to move the device around the room a lot.
 
 **Fall-back Plan:**
 
+We believe that our biggest risk is the failure to implement a robust voice interaction system, especially the speech-to-text. Therefore, if we are not able to have our user talk with the device, we will change the interaction methods to using a hardware sensor (e.g. joystick + screen) or software system (e.g. clicking button on website/phone app). 
 
 ## Design Process
 
@@ -55,9 +88,7 @@ Chat with the plant: The plant will send messages/pictures in three scenarios. 1
 
 We used an actual Devil’s Ivy plant from one of our members for the prototyping. To fit the Raspberry Pi in the planter, we removed the plant from the current pot and repotted one new branch of the plant to a new pot. We divided the pot into two parts by separating them with waterproof plastics and tapes. In the following documentation, we will refer to the two parts as the Pi space and the plant space. The Pi space is designated to be dry so that the wires and Pi (put inside the Pi space) can function. We purchased a bag of fresh potting mix and fertilizers for the plant in the plant space to keep it growing. In terms of decoration, we wanted to show the personality of the plant by giving it a cute look. Therefore, we used a beanie hat as the clothing of the plant. We also put a paper butterfly on the planter to add on to the livelihood. 
 
-![repot](https://user-images.githubusercontent.com/90153252/145897805-90eed56d-c907-4dc2-b1af-73340392ee65.jpg)
-
-![waterproof](https://user-images.githubusercontent.com/90153252/145897815-94d3598e-16cb-4943-ac05-e0da8d5ebc15.jpg)
+![prototype process](https://user-images.githubusercontent.com/90153252/145915129-5e1a9b1a-3d3e-4971-b56b-048923cbbe26.jpg)
 
 ![two spaces](https://user-images.githubusercontent.com/90153252/145891491-8def678b-4be9-4485-bd16-ee1a906a66e3.jpg)
 
